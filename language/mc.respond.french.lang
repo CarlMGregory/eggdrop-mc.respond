@@ -1,0 +1,27 @@
+ French language file for mc.respond.
+ by AZ0R0S
+
+0x001 L'information existe déjà pour %name.
+      # %name %nick
+0x002 Ok %nick, set.
+      # %nick
+0x003 pas d'équivalent trouvé, donneé consulté %total.
+      # %total
+0x004 1 réponse trouvé (en dehors de %total entré) trouvé pour %search; %matches
+      # %total %search %matches
+0x005 %mtotal donné trouvé (en dehors de %total entré) trouvé pour %search; %matches
+      # %mtotal %total %search %matches
+0x006 %mtotal donné trouvé (en dehors de %total entré) trouvé pour %search (seulement 10 afficher); %matches
+      # %mtotal %total %search %matches
+0x007 %nick: %name: %value
+      # %nick %name %value
+0x008 Impossible d'ajouté sur %array, ca n'existe pas encore!
+      # %nick %array
+0x009 %array... n'existe pas encore.
+      # %nick %array
+0x00A %nick, Anti-Idle information existe deja.
+      # %nick
+0x00B %nick, réponse contenant un %cmd command.  Vous n'avez pas l'acces pour cette commande.
+      # %nick %cmd
+0x00C numéro invalide %index.  %name vas seulement jusqu'a %tindex.
+      # %index %name %tindex

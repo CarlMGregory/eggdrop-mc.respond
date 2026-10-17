@@ -1,0 +1,27 @@
+ Norsk språkfil for mc.respond.
+ av user - user@undernet.nu
+
+0x001 Det finnes allerede info for %name.
+      # %name %nick
+0x002 Ok %nick, satt.
+      # %nick
+0x003 Ingen treff, etter søk i %total oppføringer.
+      # %total
+0x004 ETT treff (av totalt %total oppføringer) funnet for %search; %matches
+      # %total %search %matches
+0x005 %mtotal treff (av totalt %total oppføringer) funnet for %search; %matches
+      # %mtotal %total %search %matches
+0x006 %mtotal treff (av totalt %total oppføringer) funnet for %search (bare 10 vist); %matches
+      # %mtotal %total %search %matches
+0x007 %nick: %name: %value
+      # %nick %name %value
+0x008 Kunne ikke legge til i %array, det eksisterer ikke enda!
+      # %nick %array
+0x009 %array... finnes ikke.
+      # %nick %array
+0x00A %nick, Anti-Idle informasjon finnes ikke.
+      # %nick
+0x00B %nick, svaret inneholder en %cmd-kommando.  Du har ikke tilgang til å bruke denne.
+      # %nick %cmd
+0x00C Ugyldig nummer %index.  %name har en grense på %tindex.
+      # %index %name %tindex

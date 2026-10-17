@@ -1,0 +1,150 @@
+Script history of mc.respond by MC_8 - Carl M. Gregory <mc8@purehype.net>
+    ________________________________________________ ________ ____ __
+
+
+<Fixed by> - [Found by] - <Information>
+
+v1.1.0.24 (03.24.02)
+|MC_8   -               - Fixed '[mc:re:pubm]: list doesn't contain 
+|                         element 5'.
+|                         Bugzilla bug: 76
+|MC_8   -               - Fixed some anti-idle issues.
+|                         Bugzilla bug: 75
+|MC_8   -               - Coded soundex(NARA).  v1.0
+|MC_8   -               - Recoded soundex(NARA+mc) to comply with new 
+|                         format proposed in 1.1.0.24 brought about by
+|                         soundex(Daitch-Mokotoff).  v2.1 -> v2.1.1
+|MC_8   -               - Coded soundex(Daitch-Mokotoff).  v1.0
+|MC_8   -               - Changed origional soundex filename to 
+|                         soundex(NARA+mc).
+|MaSsKilla -            - Added 'croatian' language file.
+|MC_8   -               - Fixed, the pass of %veriable in respond+to to 
+|                         response using soundex support.
+|                         Bugzilla bug: 61
+ SiD3WiNDR -            - Added 'dutch' (Nederlands) language file.
+ AZ0R0S -               - Added 'french' language file.
+ user   -               - Added 'norsk' (norweagen) language file.
+ MC_8   -               - Added 'english' language file.
+ MC_8   -               - Added a error handling system.
+ MC_8   -               - Minor documenation changing and veriable name 
+                          changes.
+ MC_8   -               - Recoded soundex script, more efficent.
+                          v2.0 -> v2.1
+ MC_8   -               - Language section now has it's own file.  
+                          Coded the language file loader as well.
+ MC_8   -               - Recoded mc:re:anti-idle proc, more efficent.  
+                          old -> v1.0
+ MC_8   -               - Recoded pubm:cmd proc, more efficent.
+                          old -> v1.0
+ MC_8   -               - Added 0x00C to lang file.
+ MC_8   -               - Changed lang file to be hex format -- changed 
+                          0x010 -> 0x00A, and 0x011 -> 0x00B.
+ MC_8   -               - Changed dsearch to rsearch (r standing for 
+                          response).
+ MC_8   -               - Added addor and addand commands.
+ MC_8   -               - Upgraded ctcp proc, more efficent.  Also 
+                          supports all CTCP's not just ACTIONS.
+                          old -> v1.0
+ MC_8   -               - Changed %rnick{chan,N} to %rnick{token}.
+ MC_8   -               - Rewrote the pubm proc, more efficent.
+                        old -> v1.0
+ MC_8   -               - Upgraded SVS.
+                          v1.2 -> v2.0
+ MC_8   -               - Recoded strip:all proc to be more efficent.
+                          old -> v1.0
+ MC_8   -               - Fixed, 'couldn't compile regular expression 
+                          pattern'.  Problem in 'replace' proc.
+                          v1.0 -> v1.1
+ MC_8   -               - New database format, in proper list format.
+                          old -> v1.1
+ MC_8   -               - Rewrote save_db and load_db fucntions.
+ MC_8   -               - Changed 'mc_reveriable' to 'mc_re'.
+ MC_8   - Fritz Winkler - Fixed, '[mc:resp]: bad option "repeat":...'.
+ MC_8   - Fritz Winkler - Fixed, '[mc:resp]: divide by zero' when 
+                          setting cps to 0.
+ MC_8   - bassin247     - Fixed, '[mc:resp]: bad option "replace":...'.
+ MC_8   - GodFather     - Fixed, '[mc:resp]: can't read "mc_re(all {>=
+                          \]})": no such element in array'.
+ MC_8   - bassin247     - Fixed, '[mc:resp]: wrong # args: should be 
+                          "string match pattern string"'.
+ MC_8   -               - Made catch's for unset veriables.
+ MC_8   -               - Added soundex support.
+ MC_8   -               - Added veriable cps.
+ MC_8   -               - Made all text go through the command's 
+                          evaluation, if command evaluation returns a 0 
+                          (not used) then it's treated as response 
+                          information.
+ MC_8   -               - Fixed case sensativity problem with 
+                          replacment %veriables.
+ MC_8   -               - The script wasn't processing - (minus) flags 
+                          with unknown users, Fixed.
+ MC_8   - bassin247     - Wasn't replacing reply-to %veriables 
+                          correctly.
+ MC_8   - bassin247     - Fixed some special character problems.
+ MC_8   -               - Fixed, '[mc:resp]: invalid command name 
+                          "0-9"'.
+ MC_8   - bassin247     - If you had "bot" as one of your triggers, and 
+                          you used %botnick in your reply+to, it would 
+                          drop bot, and leave it as %nick.  Fixed.
+ MC_8   -               - Fixed, '[mc:resp]: missing close-bracket'.
+ MC_8   -               - Fixed, '[mc:resp]: invalid command name 
+                          "strip:color"'.
+ MC_8   -               - Added flag requirments to add/remove /loop 
+                          and /quote command's.
+ MC_8   -               - Added ability to strip public text of colors 
+                          before evaluating.
+ MC_8   -               - Added flag requirments for replys.
+ MC_8   -               - Fixed database saving -- screwing up 
+                          anti-idle setting.
+ MC_8   -               - Added $mc_reveriable(cmd_flgs).
+ MC_8   -               - Added SVS (v1.2).
+ MC_8   -               - Added internal filt proc.
+ MC_8   - bassin247     - Fixed, "when u add [ ] or " " to the response 
+                          of an answer u get a wacked reply".
+ MC_8   -               - Added pub commands: delor/ del/ addor/info
+ MC_8   -               - Added a save_respond_dat proc.
+ MC_8   -               - Added language sets.
+ MC_8   - bassin247     - Added pub commands: add/ dsearch/search
+ MC_8   - bassin247     - Fixed anti-idle, wouldn't find the aidle 
+                          information.
+ MC_8   -               - Changed handling of Actions (you can specify 
+                          difference between ACTION and regualar text 
+                          now).
+ MC_8   - bassin247     - Added `all' option to channels.
+ MC_8   -               - Removed dependence on Moretools.
+ MC_8   - bassin247     - Fixed, 'can't read "string2": no such 
+                          variable'.
+ MC_8   - bassin247     - Fixed, database load (wasn't loading 
+                          correctly).
+ MC_8   - bassin247     - Fixed, 'invalid timerID' aidle bot crash'.
+ MC_8   - bassin247     - Fixed, kept getting `respond_debug' errors.
+ MC_8   - bassin247     - Fixed 'invalid command name "}"' that crashed 
+                          bot on load.
+ MC_8   -               - Found a minor problem before it was found.
+ MC_8   - bassin247     - Remade database TOTALLY different and way 
+                          easier to edit.
+ MC_8   - bassin247     - Added random line function, so it doesn't 
+                          repeat on same trigger.
+ MC_8   -               - Added channel groups, changed responds over 
+                          to by channel responses.
+ MC_8   - bassin247     - Now responds to the actions as well at public 
+                          text.
+ MC_8   - bassin247     - Using veriables in the search pattern, 
+                          carried over to response.  Set by the 
+                          arguments said.
+ MC_8   -               - Added easy reply as an action, use me before 
+                          the line ex: me kicks %nick
+ MC_8   -               - Added ability to specify where a msg goes.
+ MC_8   - bassin247     - Added 'disable' veriable.
+ MC_8   - bassin247     - Created a database to host entries added via 
+                          command.
+ MC_8   - bassin247     - Added abilty to kick ban.... raw server 
+                          commands.
+ MC_8   - bassin247     - Added anti idle feature.
+ MC_8   - bassin247     - Added public search function.
+
+v1.1 (10.??.99)
+ MC_8 - MaD` - Found many errors, fixed.
+
+v1.0  ([10-12].??.99)
+ MC_8 - - Initial release.

@@ -1,0 +1,124 @@
+mc.respond's How To by bassin247 - Michael Kennedy <bassin247@eggheads.org>
+
+
+How to use bot
+here are the basic commands...
+
+
+1)
+to add a topic for use on all channels with a 1 line msg reply
+
+(@pimpin): bot-, add all testing /msg %chan testing this shit
+(@bot-): Ok pimpin, set.
+(@pimpin): testing
+(@bot-): testing this shit
+
+2)
+to add a topic for use on 1 channel with a 1 line msg reply
+
+(@pimpin): bot-, add #pureISO testing /msg %chan testing this shit
+(@bot-): Ok pimpin, set.
+(@pimpin): testing
+(@bot-): testing this shit
+the only difference between 1 and 2 is bot- will only reply to testing in #pureISO, in step one he will respond to testing in any channel
+
+3)
+to add a topic for use on all channels with a 1 line action reply
+
+(@pimpin): bot-, add all testing /action %chan tests this shit
+(@bot-): Ok pimpin, set.
+(@pimpin): testing
+* bot- tests this shit
+
+4)
+to add a topic for use on all channels with a multiple line msg reply
+
+(@pimpin): bot-, add all testing /msg %chan testing -AND- /msg %chan testing1,2 -AND- /msg %chan testing1,2,3
+(@bot-): Ok pimpin, set.
+(@pimpin): testing
+(@bot-): testing
+(@bot-): testing1,2
+(@bot-): testing1,2,3
+
+5)
+to add a topic for use on all channels with a multiple line msg and action reply
+
+(@pimpin): bot-, add all testing /msg %chan testing -AND- /action %chan tests this shit once -AND- /action %chan tests this shit twice -AND- /msg %chan this shit mist work
+(@bot-): Ok pimpin, set.
+(@pimpin): testing
+(@bot-): testing
+* bot- tests this shit once
+* bot- tests this shit twice
+(@bot-): this shit mist work
+
+6)
+to delete a topic "testing" thats used on all channels
+
+(@pimpin): bot-, del all testing
+(@bot-): Ok pimpin, set.
+
+7)
+to delete a topic "testing" thats used on a single channel
+
+(@pimpin): bot-, del #pureISO testing
+(@bot-): Ok pimpin, set.
+
+8)
+to search bot-'s database
+bot-, search word
+1 match (out of 129 entries) found for word; all word
+
+9)
+to get the info for a particular topic in bot-'s database.
+(@pimpin): bot-, info all testing
+(@bot-): pimpin: all testing /msg %chan random test response 1
+
+10)
+to add a random response to the bot-
+
+[22:32] (@pimpin): bot-, add all testing /msg %chan random test response 1
+[22:32] (@bot-): Ok pimpin, set.
+[22:32] (@pimpin): bot-, addor all testing /msg %chan random test response 2
+[22:32] (@bot-): Ok pimpin, set.
+[22:32] (@pimpin): testing
+[22:32] (@bot-): random test response 2
+[22:32] (@pimpin): testing
+[22:32] (@bot-): random test response 1
+
+11)
+to delete a random response from bot-
+
+first the information
+(@pimpin) bot-, search testing
+(@bot-) 1 match (out of 129 entries) found for testing; all testing
+(@pimpin) bot-, info all testing
+(@bot-): pimpin: all testing /msg %chan random test response 1 -OR- /msg %chan random test response 2
+
+now the syntax
+(@pimpin): bot-, delor 2 all testing
+(@bot-): Ok pimpin, set.
+what I did was deleted the second reply hence the 2
+
+the info now is this..
+(@pimpin): bot-, info all testing
+(@bot-): pimpin: all testing /msg %chan random test response 1
+
+12)
+seaching bot-'s replies for particular words
+(@pimpin): bot-, dsearch fuck
+(@bot-): 6 matches (out of 129 entries) found for fuck; #cablemodemwarez *I+will+give*leech* all fuck all errr* #cablemodemwarez *big+reward* all shut+up+%botnick all go+fuck+yourself+%botnick
+
+13)
+variables..
+%chan == the #channel's name
+%nick == the nick of the user
+%botnick == the bot's nickname
+
+14)
+making bot- kick people
+use as the response..
+/quote kick %chan %nick :kick reason.
+
+15)
+making bot respond to an action in #channel
+?ACTION+kicks+%botnick? would have bot- reply to /me kicks bot-

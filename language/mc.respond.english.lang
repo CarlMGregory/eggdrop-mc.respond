@@ -1,0 +1,27 @@
+ English language file for mc.respond.
+ by MC_8 - Carl M. Gregory <mc8@purehype.net>
+
+0x001 Info already exists for %name.
+      # %name %nick
+0x002 Ok %nick, set.
+      # %nick
+0x003 No match found, %total entries searched.
+      # %total
+0x004 1 match (out of %total entries) found for %search; %matches
+      # %total %search %matches
+0x005 %mtotal matches (out of %total entries) found for %search; %matches
+      # %mtotal %total %search %matches
+0x006 %mtotal matches (out of %total entries) found for %search (only 10 displayed); %matches
+      # %mtotal %total %search %matches
+0x007 %nick: %name: %value
+      # %nick %name %value
+0x008 Cannot add onto %array, it doesn't exist yet!
+      # %nick %array
+0x009 %array... it doesn't exist.
+      # %nick %array
+0x00A %nick, Anti-Idle information does exist.
+      # %nick
+0x00B %nick, response contains a %cmd command.  You do not have sufficent access to do that.
+      # %nick %cmd
+0x00C Invalid number %index.  %name only goes up to %tindex.
+      # %index %name %tindex

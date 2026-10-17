@@ -1,0 +1,27 @@
+ Dutch (Nederlands) language file voor mc.respond.
+ by SiD3WiNDR - Tom Laermans <sidewinder@powersource.cx>
+
+0x001 Info bestaat al voor %name.
+      # %name %nick
+0x002 Ok %nick, ingesteld.
+      # %nick
+0x003 Geen overeenkomsten gevonden, %total ingangen doorzocht.
+      # %total
+0x004 1 overeenkomst (uit %total ingangen) gevonden voor %search; %matches
+      # %total %search %matches
+0x005 %mtotal overeenkomsten (uit %total ingangen) gevonden voor %search; %matches
+      # %mtotal %total %search %matches
+0x006 %mtotal overeenkomsten (uit %total ingangen) gevonden voor %search (slechts 10 getoond); %matches
+      # %mtotal %total %search %matches
+0x007 %nick: %name: %value
+      # %nick %name %value
+0x008 Kan niet toevoegen aan %array, die bestaat nog niet!
+      # %nick %array
+0x009 %array... het bestaat niet.
+      # %nick %array
+0x00A %nick, Anti-Idle informatie bestaat.
+      # %nick
+0x00B %nick, het antwoord bevat een %cmd commando.  Je hebt er niet genoeg toegangsrechten voor.
+      # %nick %cmd
+0x00C Ongeldig nummer %index.  %name gaat maar tot %tindex.
+      # %index %name %tindex

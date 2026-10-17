@@ -1,0 +1,45 @@
+Install instructions for mc.respond
+ by MC_8 - Carl M. Gregory <mc8@purehype.net>
+    ________________________________________________ ________ ____ __
+
+
+1) Edit the file mc.respond.tcl as needed.
+2) Add 'source scripts/mc.respond.tcl' to the end of the eggdrop's 
+   configs file.
+3) '.rehash' (dcc command) the bot.
+
+Done.
+
+
+Note, the soundex tcl scripts shouldn't be messed with, they are 
+automatically called by mc.respond.tcl.
+
+
+
+Files:
+-----
+doc/mc.respond.history                  -> mc.respon's history.
+doc/mc.respond.howto                    -> A simple How To on how to 
+                                           utalize the script.
+doc/mc.respond.syntax                   -> Technical information.
+language/mc.respond.croatian.lang       -> Croation language file.
+language/mc.respond.dutch.lang          -> Dutch language file.
+language/mc.respond.english.lang        -> English language file.
+language/mc.respond.french.lang         -> French language file.
+language/mc.respond.norsk.lang          -> Norsk (norweagen) language 
+                                           file.
+scripts/mc.respond.tcl                  -> The main TCL script.
+scripts/mc.soundex(Daitch-Mokotoff).tcl -> The Daitch-Mokotoff soundex 
+                                           codebase coded specially for 
+                                           mc.respond.
+scripts/mc.soundex(NARA).tcl            -> The NARA (National Archives 
+                                           and Records Administration) 
+                                           soundex codebase coded 
+                                           specially for mc.respond.
+scripts/mc.soundex(NARA+mc).tcl         -> The NARA (National Archives 
+                                           and Records Administration), 
+                                           plus some modifications by
+                                           MC_8, soundex codebase coded 
+                                           specially for mc.respond.
+text/respond.db                         -> Internal database file used 
+                                           by mc.respond.

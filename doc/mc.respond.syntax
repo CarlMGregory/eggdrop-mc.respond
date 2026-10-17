@@ -1,0 +1,142 @@
+Syntax overview, by MC_8 - Carl M. Gregory <mc8@purehype.net>
+    ________________________________________________ ________ ____ __
+
+
+Commands
+--------
+  search <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to>>*
+    - Searches the array name' of all responds setup.
+
+  rsearch <response>*
+    - Searches the responses of all responds setup.
+
+  info <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to>>
+    - Gives the response of the given array name'.
+
+  add <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to> [global_flag(s)"|"[channel_flag(s)] [channel]]> <response>
+    - Adds a respond record.
+
+  addor <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to>> <response>
+    - Adds an "or" response' to the given array name'.
+
+  addand <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to>> <or number> <response>
+    - Adds an "and" response' to the given array name'.
+
+  del <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to>> 
+    - Deletes a respond record.
+
+  delor <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to>> <or number>
+    - Deletes an "or" response' of a respond record.
+
+  deland <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to>> <or number> <and number>
+    - Deletes an "and" response' of a respond record.
+
+  replace <"anti-idle"|<"all"|#channel1[,#channel2[,#channelN]]> <respond+to> [global_flag(s)"|"[channel_flag(s)] [channel]]> <response>
+    - This does the same as the add command, except it doesn't care if 
+      info already exists or not.  If the respond record already 
+      exists, it will overwrite it.  If not, it will make it.
+
+ Foot notes to commands:
+   o For <respond+to>, use +'s for spaces.
+   o A CTCP is passed via <oct 001><KEYWORD> <Text><oct 001>.  So, to 
+     detect something like an action:
+       example:  ?ACTION+gets+himself+some+coffee!?
+
+
+Response commands
+-----------------
+  /msg <nick/#channel> <text>
+    - Sends a private message to <nick/#channel>.
+
+  /notice <nick/#channel> <text>
+    - Sends a notice to <nick/#channel>.
+
+  /quote <RAW Server Commands>
+    - Performs a raw server command.  For more information on raw 
+      server commands check out this wonderful document:  
+      http://www.user-com.undernet.org/documents/rfc1459.txt
+
+  /me [nick/#channel] <text>
+    - Performs an action in [nick/#channel].  If [nick/#channel] is not 
+      specified, it will default to the channel it was triggered in.
+
+  /action [nick/#channel] <text>
+    - Performs an action in [nick/#channel].  If [nick/#channel] is not 
+      specified, it will default to the channel it was triggered in.
+
+  /loop <respond to>
+    - This will have the script loop/ call it's self over with a 
+      different <respond+to>.
+        Example:  If you setup a respond record to reply to:     :)
+                  You might want to add ':>', ':P' .. and so on to 
+                  '/loop :)' instead of adding "and" and "or" responses 
+                  to each one separately.
+
+ Foot notes to response commands:
+   o If no /command is given, it will default to /msg'n the channel it 
+     was triggered from.
+   o The anti-idle uses the same, except there is no /loop and for 
+     /action and /me a nick/#channel must be specified.  If there is no 
+     /command, anti-idle will post a message in dcc chat stating it 
+     doesn't know what to do.
+
+
+Response variables
+------------------
+  %rnick
+    - Returns a random nick in the channel it was triggered in.
+
+  %rnick{<token>}
+    - Returns a random nick in the channel it was triggered in.  The 
+      difference between this and %rnick is best described with an 
+      example:
+        1) test %rnick test %rnick test %rnick 
+             == test MC_8 test MC_8 test MC_8
+        2) test %rnick{abc} test %rnick{123} test %rnick{abc}
+             == test MC_8 test bassin247 test MC_8
+      If you still don't understand, I will try and explain it.  When 
+      %rnick's are replaced, it replaces them all at once.  %rnick asks 
+      for a random nick, then replaces all %rnicks with that 1 reply.  
+      The token is there so you can have more than 1 %rnick, and it not 
+      be the same (logically, possible to be the same if 1 person in 
+      the channel).
+
+   %nick
+     - The IRC Nickname of the person that triggered the response.
+
+   %uhost
+     - The ident@hostname of the person that triggered the response.
+
+   %hand
+     - The handle of the person that triggered the response.  If the 
+       user is unknown by the bot, a * is returned instead.
+
+   %chan
+     - The channel in witch the response was triggered in.
+
+   %botnick
+     - The bot's IRC Nickname.
+
+ Foot notes to response variables:
+   o There are custom variables that are defined in the <respond+to>'s.
+       Example: If the <reply+to> equals this:  Hello+%person
+                And the response equals this:  Yea, hello %person!
+                And someone said this in the channel:  Hello MC_8
+                Then the bot would respond with this:  Yea, hello MC_8!
+     A little tricky to understand, that's the best I can do.  If you 
+     feel you can explain this better, let me know.
+ 
+
+Glossary
+-------
+Array name  = "anti-idle" or "<channel> <respond+to>" section.
+And response= Respond records are setup on ORs and ANDs.
+              A quick example is:
+    /msg nickname hi AND /msg nickname What's up? OR /msg #channel test
+              First sorted by the or's, there are 2 two choose from.  
+              One the proper or is selected by the script then all the 
+              ands are performed.
+Or response = see And response.
+
+
+

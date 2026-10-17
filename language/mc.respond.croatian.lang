@@ -1,0 +1,27 @@
+ Hrvatski prijevod jezicne datoteke za mc.respond.
+ Napisao MaSsKilla - Vanja Djundjenac <masskilla@acetone.org>
+  
+0x001 Info vec postoji za %name.
+      # %name %nick
+0x002 Ok %nick, postavljeno.
+      # %nick
+0x003 Nije pronadjeno, %total stavaka pretrazeno.
+      # %total
+0x004 1 stavak (od %total) pronadjen za %search; %matches
+      # %total %search %matches
+0x005 %mtotal stavaka (od %total) pronadjeno za %search; %matches
+      # %mtotal %total %search %matches
+0x006 %mtotal stavaka (od %total) pronadjeno za %search (prvih 10 prikazano); %matches
+      # %mtotal %total %search %matches
+0x007 %nick: %name: %value
+      # %nick %name %value
+0x008 Ne mogu dodati u %array, ne postoji!
+      # %nick %array
+0x009 %array... vise ne postoji.
+      # %nick %array
+0x00A %nick, Anti-Idle podaci postoje.
+      # %nick
+0x00B %nick, odgovor sadrzi %cmd komandu.  Nemas potreban nivo pristupa za to.
+      # %nick %cmd
+0x00C Invalidni broj %index.  %name ide samo do %tindex.
+      # %index %name %tindex
